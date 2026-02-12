@@ -1,10 +1,13 @@
 name: Hello_world execution
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+
 jobs:
   hellos:
-    runs-on: ububuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: hello World
-        run: echo "Welcome to Github-actions"
+      - name: Hello World
+        run: echo "Welcome to GitHub Actions"
+
     
 
