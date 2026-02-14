@@ -1,15 +1,31 @@
-name: Hello_world execution
+name: Hello_world_execution
 on: workflow_dispatch
+
 jobs:
-  hellos:
+  build:
+    name: Build the code
     runs-on: ubuntu-latest
     steps:
-      - name: Execute Multiple cmds
-        run: |
-          echo "Start Build"
-          pwd
-          ls -la
-          echo "Completed Successfully"
+      - name: Build step
+        run: echo "Build the JAVA application"
 
+  test:
+    name: Test the app
+    runs-on: ubuntu-latest
+    steps:
+      - name: Application test
+        run: echo "Test the JAVA application"
+
+  deploy:
+    name: Deploy to K8s
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy step
+        run: echo "Deploy to K8s"
+
+
+       
+      
+        
     
 
