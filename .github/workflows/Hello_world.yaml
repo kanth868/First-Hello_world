@@ -1,13 +1,15 @@
 name: Hello_world execution
-on:
-  workflow_dispatch:
-
+on: workflow_dispatch
 jobs:
   hellos:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World
-        run: echo "Welcome to GitHub Actions"
+      - name: Execute Multiple cmds
+        run: |
+          echo "Start Build"
+          pwd
+          ls -la
+          echo "Completed Successfully"
 
     
 
